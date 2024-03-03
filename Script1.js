@@ -1,4 +1,3 @@
-// JavaScript source code
 $(document).ready(function () {
     var taskNum = 1;
     const submitBTN = document.querySelector('#submit-button');
@@ -7,29 +6,35 @@ $(document).ready(function () {
 
     submitBTN.addEventListener('click', function () {
         var UserIn = PasswordField.value;
+
         if (taskNum == 1) {
-            document.getElementById('task-num').innerText = "Task #1";
-            document.getElementById('task-desc').innerText = "This is Task 1";
-            if (UserIn != "Workshop Room") {
-                errorMessage.style.color = "red";
-            }
-            else {
+            if (UserIn == "Workshop Room") {
+                document.getElementById('task-num').innerText = "Task #2";
+                document.getElementById('task-desc').innerText = "This is Task 2";
+                PasswordField.value = "";
                 taskNum++;
+            } else {
+                alert("Wrong Answer");
             }
         } else if (taskNum == 2) {
-            document.getElementById('task-num').innerText = "Task #2";
-            document.getElementById('task-desc').innerText = "This is Task 2";
-            if (UserIn != "Room") {
-                errorMessage.style.color = "red";
-            }
-            else {
+            if (UserIn == "Room") {
+                document.getElementById('task-num').innerText = "Task #3";
+                document.getElementById('task-desc').innerText = "This is Task 3";
+                PasswordField.value = "";
                 taskNum++;
+            } else {
+                alert("Wrong Answer");
             }
         } else if (taskNum == 3) {
-            document.getElementById('TaskTitle').innerText = "Task #3";
-            document.getElementById('TaskDecr').innerText = "This is Task 3";
+            if (UserIn == "Sleep Room") {
+                document.getElementById('task-num').innerText = "Task completed!";
+                document.getElementById('task-desc').innerText = "Congratulations!";
+                errorMessage.style.color = "black";
+                taskNum++;
+            } else {
+                errorMessage.style.color = "red";
+                alert("Wrong Answer");
+            }
         }
     });
 });
-
-
