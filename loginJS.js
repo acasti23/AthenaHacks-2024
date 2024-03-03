@@ -8,7 +8,7 @@ $(document).ready(function () {
         var userName = userNameField.value;
         var password = passwordField.value;
         if (userName == "SuperDucky" && password == "DuckyMomo123") {
-            window.location.href = 'instructions.html';
+            window.location.href = '/instructions.html';
         }
         else {
             alert("Wrong Password");
