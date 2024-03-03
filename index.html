@@ -1,41 +1,36 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <link href="quack.css" rel="stylesheet" />
-
+    <title>Login Page</title>
+    <link href="login.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="Script1.js"></script>
+    <script src="/loginJS.js"></script>
 
-    <title> QuackEmergency </title>
 </head>
 
 <body>
     <header class="header">
-        <span id="task-num"> Task #</span>
+        <span id="top-welcome"> Welcome to </span>
+        <span id="top-quack"> Quack Energy </span>
     </header>
 
     <img class="duck-icon" src="../assets/duck-icon.png" alt="Duck Icon">
 
-    <div class="desc-box">
-        <p id="task-desc">  </p>
-    </div>
-
-    <div class="hint">
-        <p id="hint-button"> HINT </p>
-    </div>
-
-    <div class="password-box">
-        <p id="password-label"> Password: </p>
+    <div class="login-box">
+        <p id="username-label"> username: </p>
+        <input type="text" id="username-input" name="username" required />
+        <p id="password-label"> password: </p>
         <input type="text" id="password-input" name="password" required />
     </div>
 
     <div id="submit">
         <button id="submit-button"> SUBMIT </button>
     </div>
+
 </body>
 
 </html>
